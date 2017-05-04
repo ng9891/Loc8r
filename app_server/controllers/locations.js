@@ -8,7 +8,7 @@ module.exports.homelist = function(req,res){
 
 /* GET Location info page. */
 module.exports.locationInfo = function(req,res){
-		res.render('index', {
+		res.render('location-info', {
 			title: 'Location Info',
 			midBody: 'This is the midBody' 
 		});
