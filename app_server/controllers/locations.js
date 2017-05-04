@@ -1,6 +1,6 @@
 /* GET about page. */
 module.exports.homelist = function(req,res){
-		res.render('index', {
+		res.render('locations-list', {
 			title: 'Home',
 			midBody: 'This is the midBody'
 		});
