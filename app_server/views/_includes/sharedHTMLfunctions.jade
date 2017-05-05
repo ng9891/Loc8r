@@ -3,7 +3,9 @@ mixin outputRating(rating)
     span.glyphicon.glyphicon-star
   -for (var i=rating; i<5; i++)
     span.glyphicon.glyphicon-star-empty
-mixin spanFacility(obj)
-  each facility in obj.facilities
-    span.label.label-warning #{facility}
-    |  &nbsp;
+
+//-
+  mixin spanFacility(obj)
+    each facility in obj.facilities
+      span.label.label-warning #{facility}
+      |  &nbsp;

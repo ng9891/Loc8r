@@ -50,7 +50,7 @@ block content
                   .review
                     .well.well-sm.review-header
                       span.reviewAuthor #{review.author}
-                      small.reviewTimestamp #{review.timestamp}
+                      small.reviewTimestamp #{review.createdOn}
                       span.rating.pull-right
                         +outputRating(review.rating)
                     .col-xs-12
