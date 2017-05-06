@@ -1,11 +1,18 @@
 //Manage connections to the database
 var mongoose = require ('mongoose');
 
-var dbURL= 'mongodb://localhost/Loc8r';
-mongoose.connect(dbURL);
+//NODE_ENV development
+var dbURI= 'mongodb://localhost/Loc8r';
+
+//NODE_ENV production
+if (process.env.NODE_ENV === 'production'){
+	dbURI = 'Connection to the database'
+}
+
+mongoose.connect(dbURI);
 
 mongoose.connection.on('connected', function(){
-	console.log('Mongoose connected to ' + dbURL);
+	console.log('Mongoose connected to ' + dbURI);
 });
 
 mongoose.connection.on('error', function(err){
@@ -44,4 +51,5 @@ process.on('SIGTERM', function () {
 	});
 });
 
+//Schema for locations
 require('./locationModels');

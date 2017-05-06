@@ -1,4 +1,4 @@
-/* GET about page. */
+/* GET location page. */
 module.exports.homelist = function(req,res){
 		res.render('locations-list', {
 			title: 'Loc8r - find a place to work with wifi',
